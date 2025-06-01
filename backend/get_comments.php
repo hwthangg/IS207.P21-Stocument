@@ -49,7 +49,7 @@ while ($row = $result->fetch_assoc()) {
     $comments[] = [
         'id' => $row['com_id'],
         'text' => $row['context'],
-        'user' => $row['username'] ?: $row['full_name'],
+        'user' => $row['full_name'] ?: $row['username'],
         'user_id' => $row['user_id'], 
         'created_at' => $row['created_at'],
     ];

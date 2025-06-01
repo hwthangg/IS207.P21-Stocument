@@ -86,6 +86,7 @@ const OpenDocument = () => {
         credentials: 'include',
       });
       const data = await response.json();
+      console.log(data)
       if (data.success) {
         setComments(data.comments);
         console.log('📥 Danh sách bình luận:', data.comments);
@@ -141,7 +142,7 @@ const OpenDocument = () => {
       });
 
       const data = await response.json();
-
+console.log(data)
       if (data.success) {
         setCommentInput('');
         await fetchComments(); // Tải lại toàn bộ danh sách từ server theo thứ tự mới nhất
