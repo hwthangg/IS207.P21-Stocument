@@ -8,6 +8,7 @@ import { useAuth } from '../../../contexts/AuthContext';
 import { Link, useLocation } from 'react-router-dom';
 import { useHeader } from '../../../contexts/HeaderContext';
 import { FaBookmark, FaRegBookmark } from 'react-icons/fa';
+import avatar from '../../../assets/avatar.png'
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
@@ -284,7 +285,7 @@ const OpenDocument = () => {
             {comments.map(comment => (
               <div key={comment.id} className={styles.commentItem}>
                 <img
-                  src={comment.avatar || '/img/default-avatar.jpg'}
+                  src={comment.avatar || avatar}
                   alt="avatar"
                   className={styles.avatar}
                 />

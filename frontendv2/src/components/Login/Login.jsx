@@ -61,16 +61,20 @@ function Login(props) {
         .then(res => res.json())
         .then(data => {
           if (data.success) {
-            alert(data.message);
-            setIsLoggedIn(true);
-            setUser({
+
+            const user = {
               user_id: data.user.user_id,
               username: data.user.username,
               role: data.user.role,
               fullName: data.user.full_name
-            });
+            }
+            console.log(user);
+        
             localStorage.setItem('user', JSON.stringify(data.user));
             localStorage.setItem('isLoggedIn', 'true');
+                setIsLoggedIn(true);
+          
+      setUser(prev => ({...prev,user}));
             props.setOpenLogin(false);
           } else {
             alert("Lỗi: " + data.message);

@@ -16,7 +16,7 @@ import {
   FaHamburger,
 } from "react-icons/fa";
 import { GoHomeFill } from "react-icons/go";
-import avatar from "../../assets/avatar.jpg";
+import avatar from "../../assets/avatar.png";
 import { useAuth } from "../../contexts/AuthContext";
 import { useTheme } from "../../contexts/ThemeContext";
 import { useHeader } from "../../contexts/HeaderContext";
@@ -97,15 +97,15 @@ const Header = () => {
   useEffect(() => {
     console.log(theme);
     console.log(isLoggedIn);
-    console.log(user)
-  }, [activeLink, theme, user]);
+    console.log(user);
+  }, [activeLink, theme, user, showLoginForm]);
 
   return (
     <>
       <div className={theme == "dark" ? styles.darkTheme : ""}>
         {" "}
         <div className={styles.container}>
-          <div className={styles.logoContainer} onClick={()=>navigate('/')}>
+          <div className={styles.logoContainer} onClick={() => navigate("/")}>
             {" "}
             <div>
               {" "}
@@ -178,15 +178,12 @@ const Header = () => {
                     </p>
                   </div>
 
-                  <img
-                    src={avatar}
-                    style={{
-                      width: 60,
-                      aspectRatio: "1/1",
-                      borderRadius: "100px",
-                    }}
-                    alt="Avatar"
-                  />
+                                        <img
+  src={user.picture ||avatar}
+  alt="avatar"
+  style={{ width: '60px', aspectRatio: '1 / 1', borderRadius: '100px' }}
+  referrerPolicy="no-referrer"
+/>
 
                   {showDropdown && (
                     <div className={styles.dropDownProfile}>
@@ -232,56 +229,53 @@ const Header = () => {
                       Chào mừng bạn đến với <br /> <span>Stocument</span>
                     </p>
                   </div>
-                  {isLoggedIn ? <>
-                    <div
-                      className={styles.userProfile} style={{ width: '100%', justifyContent: 'flex-start' }}
-                 
-                    ><img
-                        src={avatar}
-                        style={{
-                          width: 60,
-                          aspectRatio: "1/1",
-                          borderRadius: "100px",
-                        }}
-                        alt="Avatar"
-                      />
-                      <div>
-                        <p className={styles.welcomeText}>Xin chào!</p>
-                        <p className={styles.userName}>
-                          {user?.full_name || "Người dùng"}
+                  {isLoggedIn ? (
+                    <>
+                      <div
+                        className={styles.userProfile}
+                        style={{ width: "100%", justifyContent: "flex-start" }}
+                      >
+                       <img
+  src={user.picture}
+  alt="avatar"
+  style={{ width: '60px', aspectRatio: '1 / 1', borderRadius: '100px' }}
+  referrerPolicy="no-referrer"
+/>
+                        <div>
+                          <p className={styles.welcomeText}>Xin chào!</p>
+                          <p className={styles.userName}>
+                            {user?.full_name || "Người dùng"}
+                          </p>
+                        </div>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      {" "}
+                      <div className={styles.content}>
+                        <p>
+                          <span>Đăng nhập</span> ngay để có thể tìm được <br />
+                          tài liệu mong muốn!
                         </p>
                       </div>
-
-
-
-
-
-
-                    </div>
-
-                  </> : <> <div className={styles.content}>
-
-                    <p>
-                      <span>Đăng nhập</span> ngay để có thể tìm được <br />
-                      tài liệu mong muốn!
-                    </p>
-                  </div>
-                    <div className={styles.buttonContainer}>
-                      {" "}
-                      <button onClick={toggleSignUp}>Đăng ký</button>{" "}
-                      <button onClick={toggleLogin}>Đăng nhập</button>
-                    </div> <div className={styles.content}>
-
-                      <p>
-                        <span>Đăng nhập</span> ngay để có thể tìm được <br />
-                        tài liệu mong muốn!
-                      </p>
-                    </div>
-                    <div className={styles.buttonContainer}>
-                      {" "}
-                      <button onClick={toggleSignUp}>Đăng ký</button>{" "}
-                      <button onClick={toggleLogin}>Đăng nhập</button>
-                    </div></>}
+                      <div className={styles.buttonContainer}>
+                        {" "}
+                        <button onClick={toggleSignUp}>Đăng ký</button>{" "}
+                        <button onClick={toggleLogin}>Đăng nhập</button>
+                      </div>{" "}
+                      <div className={styles.content}>
+                        <p>
+                          <span>Đăng nhập</span> ngay để có thể tìm được <br />
+                          tài liệu mong muốn!
+                        </p>
+                      </div>
+                      <div className={styles.buttonContainer}>
+                        {" "}
+                        <button onClick={toggleSignUp}>Đăng ký</button>{" "}
+                        <button onClick={toggleLogin}>Đăng nhập</button>
+                      </div>
+                    </>
+                  )}
 
                   <div className={styles.navContainerMobile}>
                     <NavLink
@@ -319,23 +313,26 @@ const Header = () => {
                       <FaQuestionCircle size={20} className={styles.iconMenu} />{" "}
                       Đặt câu hỏi
                     </NavLink>
-                    {isLoggedIn ? <>
-
-                      <hr />
-                      <NavLink
-                        to={"/personal"}
-                        className={({ isActive }) =>
-                          isActive ? styles.activeLinkMobile : ""
-                        }
-                      >
-                        <FaUser size={20} className={styles.iconMenu} /> Trang cá nhân
-                      </NavLink>
-                      <NavLink
-                        to={"/"}
-                        onClick={handleLogout}
-                      >
-                        <FaSignOutAlt size={20} className={styles.iconMenu} /> Đăng xuất
-                      </NavLink></> : <></>}
+                    {isLoggedIn ? (
+                      <>
+                        <hr />
+                        <NavLink
+                          to={"/personal"}
+                          className={({ isActive }) =>
+                            isActive ? styles.activeLinkMobile : ""
+                          }
+                        >
+                          <FaUser size={20} className={styles.iconMenu} /> Trang
+                          cá nhân
+                        </NavLink>
+                        <NavLink to={"/"} onClick={handleLogout}>
+                          <FaSignOutAlt size={20} className={styles.iconMenu} />{" "}
+                          Đăng xuất
+                        </NavLink>
+                      </>
+                    ) : (
+                      <></>
+                    )}
                   </div>
                 </div>
               </div>
@@ -344,9 +341,28 @@ const Header = () => {
             <></>
           )}
         </div>
-        {showLoginForm ? <Login setOpenLogin={setShowLoginForm} setOpenForgot={setShowForgotForm} setOpenSignUp={setShowSignUpForm} /> : <></>}
-        {showSignUpForm ? <SignUp setOpenSignUp={setShowSignUpForm} setOpenLogin={setShowLoginForm} /> : <></>}
-        {showForgotForm ? <ForgotPassword setOpen={setShowForgotForm} /> : <></>}
+        {showLoginForm ? (
+          <Login
+            setOpenLogin={setShowLoginForm}
+            setOpenForgot={setShowForgotForm}
+            setOpenSignUp={setShowSignUpForm}
+          />
+        ) : (
+          <></>
+        )}
+        {showSignUpForm ? (
+          <SignUp
+            setOpenSignUp={setShowSignUpForm}
+            setOpenLogin={setShowLoginForm}
+          />
+        ) : (
+          <></>
+        )}
+        {showForgotForm ? (
+          <ForgotPassword setOpen={setShowForgotForm} />
+        ) : (
+          <></>
+        )}
       </div>
     </>
   );

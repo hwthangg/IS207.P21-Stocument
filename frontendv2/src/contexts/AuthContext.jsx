@@ -14,10 +14,11 @@ export const AuthProvider = ({ children }) => {
     const savedLoginStatus = localStorage.getItem('isLoggedIn');
 
     if (savedUser && savedLoginStatus === 'true') {
+     
       setUser(JSON.parse(savedUser));
       setIsLoggedIn(true);
     }
-  }, []);
+  }, [isLoggedIn]);
 
   return (
     <AuthContext.Provider value={{

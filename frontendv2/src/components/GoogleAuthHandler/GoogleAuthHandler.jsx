@@ -18,6 +18,7 @@ function GoogleAuthHandler() {
         username: params.get('username'),
         full_name: params.get('full_name'),
         role: params.get('role'),
+        picture: params.get('picture'),
       };
 
       // Lưu thông tin đăng nhập
@@ -25,7 +26,7 @@ function GoogleAuthHandler() {
       localStorage.setItem('isLoggedIn', 'true');
 
       setIsLoggedIn(true);
-      setUser(user);
+      setUser(prev => ({...prev,user}));
 
       navigate('/'); // hoặc /personal nếu muốn
     } else {

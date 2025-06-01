@@ -84,4 +84,7 @@ button {
   background: transparent;
 }
 
-/* input ::-ms-reveal{display: none;} */
+    input::-ms-reveal,
+      input::-ms-clear {
+        display: none;
+      }

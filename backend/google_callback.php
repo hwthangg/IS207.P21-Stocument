@@ -18,6 +18,7 @@ if (isset($_GET['code'])) {
         $email = $google_account->email;
         $name = $google_account->name;
         $google_id = $google_account->id;
+        $picture = $google_account->picture;
 
         // Kiểm tra người dùng
         $stmt = $con->prepare("SELECT * FROM users WHERE email = ?");
@@ -51,13 +52,15 @@ if (isset($_GET['code'])) {
         $_SESSION['username'] = $username;
         $_SESSION['full_name'] = $name;
         $_SESSION['role'] = 'student';
+        $_SESSION['picture'] = $picture;
         // Gửi dữ liệu về frontend qua URL
         $query = http_build_query([
             'googleLogin' => 'success',
             'user_id' => $user_id,
             'username' => $username,
             'full_name' => $name,
-            'role' => 'student'
+            'role' => 'student',
+            'picture' => $picture
         ]);
 
         header("Location: http://localhost:5173/google-auth?$query");
