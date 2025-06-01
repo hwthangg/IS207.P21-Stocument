@@ -1,0 +1,367 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* MAIN BODY: Tài liệu */
+.mainBody {
+  background-color: #fdfaf5;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex: 1;
+}
+
+.mainBody p {
+  color: black !important;
+}
+
+.mainBodyContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+}
+
+/* Khối tìm kiếm và upload */
+.wrapperSearchDocument {
+  text-align: center;
+  background: #fce4ec;
+  padding: 40px 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.documentTitle {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1b1c31;
+  margin-bottom: 16px;
+}
+
+.wrapperSearchUpload {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  /* flex-wrap: wrap; */
+
+   width: 66%;
+flex-direction: row;
+}
+.searchContainer{
+  width: 100%;   position: relative;
+}
+.searchInput {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 2px solid rgb(255 141 248 / 47%);
+  border-radius: 20px;
+  width: 100%;
+  outline: none;
+  background-color: white;
+ 
+  
+}
+
+.uploadButton {
+  background: white;
+  color: rgba(255, 0, 242, 0.47);
+  padding: 12px 24px;
+ border: 2px solid rgb(255 141 248 / 47%);
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  width: fit-content;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-wrap: none;
+  min-width: 150px;
+  
+}
+
+.uploadButton:hover {
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* Hướng dẫn */
+.wrapperInstruction {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1b1c31;
+  padding-left: 140px;
+}
+
+/* Danh sách tài liệu */
+.wrapperDocumentList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+  padding: 1px 0;
+  flex-direction: column;
+}
+.pathContainer{
+
+  width: 70%;
+
+  border-radius: 10px;
+  margin-bottom:30px ;
+
+}
+.pathContainer{
+  font-weight: bold;
+}
+
+.documentTable {
+  width: 70%;
+  max-width: 1200px;
+  border-collapse: collapse;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 2px 50px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px !important;
+
+}
+.darkTheme .documentTable{
+  box-shadow: 0 0px 50px rgba(255, 255, 255, 0.1);
+}
+.documentTable th,
+.documentTable td {
+  text-align: left;
+  padding: 16px 8px;
+
+
+}
+
+.documentTable th {
+  background-color: #fce4ec;
+  color: #1b1c31;
+  font-weight: 700;
+  font-size: large;
+}
+
+/* .documentTable td:first-child {
+  padding-left: 8px;
+}
+
+.documentTable td + td {
+  padding-left: 8px;
+} */
+
+.documentTable tr {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.documentTable tr:hover {
+  background-color: rgb(247, 237, 237);
+}
+
+.iconCell img {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+
+/* YourComponent.module.css */
+.dropdownResults {
+  position: absolute;
+  background-color: #ebecf6;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 20;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  top: calc(100% + 2px);
+  left: 0;
+  border-radius: 8px;
+}
+
+/* Style for each item in the dropdown */
+
+.darkTheme .dropdownItem:hover{
+  background-color: #4f4353;
+}
+
+ .dropdownItem:hover{
+  background-color: #d3c7d7;
+}
+/* Style for the icon container (not strictly needed with inline styles) */
+.icon {
+  display: flex;
+  align-items: center;
+}
+.darkTheme .resultText{
+color: white
+}
+/* Style for the result text */
+.resultText mark {
+  background-color: #ffff00;
+  color: #000;
+  font-weight: bold;
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .mainBody {
+    padding: 40px 16px;
+  }
+
+  .mainBodyContainer {
+    gap: 32px;
+  }
+
+  .wrapperSearchUpload {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .searchInput {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .uploadButton {
+    width: 100%;
+    text-align: center;
+  }
+
+  .documentTitle {
+    font-size: 28px;
+  }
+
+  .wrapperInstruction {
+    font-size: 20px;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .documentTable th,
+  .documentTable td {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
+  .dropdownResults {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .documentTitle {
+    font-size: 24px;
+  }
+
+  .wrapperInstruction {
+    font-size: 18px;
+  }
+
+  .searchInput,
+  .uploadButton {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  .documentTable th,
+  .documentTable td {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+}
+
+/* Dark mode */
+.darkTheme {
+  background-color: #1b1c31;
+  color: #f0f0f0;
+}
+
+.darkTheme .mainBody {
+  background-color: #1b1c31;
+}
+
+.darkTheme .wrapperSearchDocument {
+  background-color: rgba(35, 41, 211, 0.107);
+  color: #f0f0f0;
+}
+
+.darkTheme .documentTitle {
+  color: #f0f0f0;
+}
+
+.darkTheme .searchInput {
+  background-color: black;
+  color: #f0f0f0;
+  border-color: rgb(255 141 248 / 47%);
+}
+
+.darkTheme .searchInput::placeholder {
+  color: #aaa;
+}
+
+.darkTheme .uploadButton {
+  background-color: black;
+  color: rgb(255, 0, 238);
+    border-color: rgb(255 141 248 / 47%);
+}
+
+
+.darkTheme .wrapperInstruction {
+  color: #f0f0f0;
+}
+
+
+.darkTheme .documentTable th {
+  background-color: #1c1d42;
+  color: #f0f0f0;
+
+}
+
+.darkTheme .documentTable tr {
+  background-color: #13152b;
+  color: #f0f0f0;
+
+}
+
+.darkTheme .documentTable tr:hover{
+  background-color: #5854a1 !important;
+}
+
+
+
+.darkTheme .dropdownResults {
+  background-color: #1b1c31;
+  border-color: #555;
+}
+
+.darkTheme .dropdownResults li {
+  color: #f0f0f0;
+}
+
+.darkTheme .dropdownResults li:hover {
+  background-color: rgba(12, 12, 188, 0.595);
+}
+
+.darkTheme .resultText mark {
+  background-color: #555;
+  color: #fff;
+}
+
+.darkTheme .resultType {
+  color: #aaa;
+}

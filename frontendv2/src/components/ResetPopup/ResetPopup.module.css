@@ -1,0 +1,89 @@
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popupContent {
+  background-color: #fff;
+  padding: 30px 25px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.inputField {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  transition: border 0.2s ease;
+}
+
+.inputField:focus {
+  outline: none;
+  border-color: #6dd5be;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, rgb(109, 213, 190) 0%, rgb(255, 141, 213) 100%);
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.closeButton {
+  margin-top: 10px;
+  text-align: center;
+  color: #999;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.closeButton:hover {
+  color: #333;
+}

@@ -1,0 +1,161 @@
+/* Tổng thể Container */
+.statisticContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Lưới các Card */
+.statisticGrid {
+  height: 50%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 4fr 5fr 6fr;
+  gap: 1em;
+}
+/* Một Card đơn */
+.statisticCard {
+  width: 100%;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1em;
+}
+
+/* Header của Card */
+.cardHeader {
+  padding: 1em 1em 0;
+}
+
+/* Tiêu đề trong Header */
+.cardTitle {
+  font-size: large !important;
+  font-weight: normal !important;
+  margin: 0 !important;
+
+}
+
+/* Giá trị lớn trong Header */
+.cardValue {
+  font-size: 3em !important;
+  margin: 20 0 0 !important;
+
+}
+
+/* Linear Progress Section */
+.linearProgressWrapper {
+  padding: 0 1.5em;
+  margin-top: 1em;
+}
+
+/* Label dưới thanh Linear Progress */
+.progressLabel {
+  font-size: medium !important;
+  font-weight: bold !important;
+}
+
+/* Body Card 2 */
+.cardBody {
+  display: flex;
+  align-items: center;
+  /* padding: 1em; */
+  box-sizing: border-box;
+}
+
+/* Grid thông tin nhỏ trong Card */
+.statGrid {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 3px;
+  margin-top: 1em;
+  font-size: medium;
+
+  
+
+}
+
+.statGrid p {
+  margin: 0 !important;
+  font-weight: normal !important;
+  font-size: medium;
+
+}
+
+.statGrid p:nth-child(odd) {
+  text-align: right;
+}
+
+/* Circle Progress bên phải Card 2 */
+.circleProgressWrapper {
+  margin: 0 1em;
+  width: 250px;
+}
+
+/* Access Section trong Card 3 */
+.cardAccess {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  position: relative;
+}
+
+.cardAccessDes{
+  margin: 0 !important;
+  font-weight: normal !important;
+  font-size: medium !important;
+
+}
+
+/* Ảnh người dùng truy cập */
+.accessImage {
+  height: 7em;
+
+  object-fit: fill;
+
+}
+
+/* Responsive: Mobile */
+@media screen and (max-width: 768px) {
+  .statisticGrid {
+    grid-template-columns: 1fr;
+    row-gap: 1vh;
+  }
+
+  .cardTitle {
+    font-size: small !important;
+  }
+
+  .statGrid p {
+    margin: 0 !important;
+    font-weight: normal !important;
+    font-size: x-small !important;
+
+  }
+
+  .cardAccess p{
+
+    font-size: x-small;
+  
+  }
+
+  .progressLabel {
+    font-size: x-small !important;
+
+  }
+
+  .cardAccessDes{
+    font-size: x-small!important;
+  
+  }
+
+  .circleProgressWrapper {
+  margin: 0 1em;
+  width: 250px;
+ 
+}
+
+ .statisticCard{
+  width: 70%;
+ }
+
+}

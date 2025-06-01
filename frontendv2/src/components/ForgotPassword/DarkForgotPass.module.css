@@ -1,0 +1,45 @@
+/* Dark Mode for Layout */
+.darkTheme .layout {
+  background-color: rgba(0, 0, 0, 0.8); /* Nền tối */
+}
+
+/* Dark Mode for Forgot Password Wrapper */
+.darkTheme .forgotPasswordWrapper {
+  background-color: #1b1c31; /* Nền hộp tối */
+  color: #f0f0f0; /* Màu chữ sáng */
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1); /* Đổ bóng mềm hơn */
+}
+
+/* Dark Mode for Forgot Password Title */
+.darkTheme .forgotPasswordTitle {
+  color: #f0f0f0; /* Màu chữ tiêu đề */
+}
+
+/* Dark Mode for Error Messages */
+.darkTheme .errorMessage {
+  color: #ff6b6b; /* Màu đỏ cho thông báo lỗi */
+}
+
+/* Dark Mode for Input Fields */
+.darkTheme .inputField {
+  background-color: #2b2b2b; /* Nền input tối */
+  color: #f0f0f0; /* Màu chữ input */
+  border: 1px solid #555; /* Viền tối hơn */
+}
+
+.darkTheme .inputField::placeholder {
+  color: #aaa; /* Placeholder màu xám nhạt */
+}
+
+/* Dark Mode for Submit Button */
+.darkTheme .submitBtn {
+  background: linear-gradient(90deg, rgba(109, 213, 190, 1) 0%, rgba(255, 141, 213, 1) 100%);
+  color: white;
+}
+
+.darkTheme .submitBtn:hover {
+  background: linear-gradient(90deg, #880383 0%, #21BFFE 100%); /* Gradient hover khác */
+  opacity: 0.9; /* Giảm nhẹ opacity khi hover */
+}
+
+

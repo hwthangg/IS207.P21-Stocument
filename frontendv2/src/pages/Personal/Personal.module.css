@@ -1,0 +1,125 @@
+/* Khung bao ngoài toàn bộ trang */
+.container {
+  width: 100%;
+  padding: 5rem;
+  box-sizing: border-box;;
+  cursor: default; /* Không click được */
+
+}
+
+/* Bọc giữa sidebar và phần nội dung chính */
+.contentWrapper {
+  width: 100%;
+  display: flex;
+  position: relative;
+  z-index: 0;
+  box-sizing: border-box;
+  padding: 3rem 5rem;
+  border-radius: 1rem;
+  box-shadow: 4px 4px 10px rgba(70, 40, 81, 0.25);
+  cursor: default; /* Không click được */
+ 
+  
+
+}
+
+/* Thanh sidebar chứa các icon */
+.sidebar {
+  width: 5rem;
+  aspect-ratio: 1/3;
+  position: absolute;
+  left: -2.5rem;
+  top: 3rem;
+  z-index: 2;
+  box-sizing: border-box;
+  border-radius: 3rem;
+  cursor: default; /* Không click được */
+}
+
+/* Mỗi item trong sidebar (biểu tượng) */
+.sidebarItem {
+  width: 100%;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3rem;
+  cursor: pointer; /* Click được để chuyển tab */
+}
+
+/* Icon trong mỗi item */
+.sidebarItem img {
+  width: 30%;
+  object-fit: contain;
+  position: relative;
+  z-index: 10;
+  cursor: pointer; /* Click được */
+}
+
+/* Thanh hiển thị item đang được chọn */
+.activeIndicator {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 3rem;
+  position: absolute;
+  top: 0;
+  transition: top 0.3s ease;
+  pointer-events: none; /* Không cho click */
+}
+
+/* Nội dung chính bên phải */
+.mainContent {
+  width: 100%;
+  display: flex;
+  margin-bottom: 3rem;
+  flex-direction: column;
+  box-sizing: border-box;
+  cursor: default; /* Không click được */
+  
+}
+
+/* Tiêu đề nội dung chính */
+.mainContent p {
+  font-size: x-large;
+  font-weight: bold;
+  margin: 0 0 1rem;
+  cursor: default; /* Chỉ để đọc */
+}
+
+/* Phần nội dung hiển thị tùy theo tab */
+.contentBox {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 400px;
+  cursor: default; /* Không phải khu vực click */
+}
+
+/* Responsive: điều chỉnh padding và font cho màn hình nhỏ */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 2rem;
+  }
+
+  .contentWrapper {
+    padding: 2rem;
+  }
+
+  .sidebar {
+    width: 2rem;
+    top: 2rem;
+    left: -1rem;
+  }
+
+  .mainContent p {
+    font-size: medium;
+  }
+
+  .mainContent {
+    margin-bottom: 1rem;
+  }
+
+  .contentBox{
+    min-height: 200px;
+  }
+
+}

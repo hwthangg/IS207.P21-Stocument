@@ -1,0 +1,196 @@
+/* Main container styles */
+.askQuestionContainer {
+  max-width: 100%;
+  padding: 3rem 2rem;
+  background-color: var(--light-bg);
+}
+
+.darkTheme .askQuestionContainer{
+    background-color: var(--dark-bg);
+}
+
+/* Card container */
+.questionCard {
+  max-width: 42rem;
+  margin: 0 auto;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0px 50px rgba(0,0,0,0.1);
+}
+
+.darkTheme .questionCard{
+  background-color: rgb(47, 37, 73);
+  color: white;
+}
+
+/* Header section */
+.questionHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.questionTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.darkTheme .questionTitle{
+  color: #ffffff;
+}
+
+.questionSubtitle {
+  color: #4b5563;
+  margin-top: 0.5rem;
+}
+.darkTheme .questionSubtitle{
+  color: white;
+}
+/* Success message */
+.successContainer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #ecfdf5;
+  border: 1px solid #bbf7d0;
+  border-radius: 0.5rem;
+}
+
+.successTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #047857;
+  margin-bottom: 0.5rem;
+}
+
+.successMessage {
+  color: #065f46;
+  margin-bottom: 1rem;
+}
+
+.homeButton {
+  background-color: #ec4899;
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+/* Form styles */
+.questionForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  margin-bottom: 1rem;
+}
+
+.formLabel {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.darkTheme .formLabel{
+  color: white;
+}
+
+.requiredField {
+  color: red;
+}
+
+.formInput {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+  outline: none;
+  font-size: 1rem;
+}
+
+.darkTheme .formInput{
+  background-color: rgb(29, 18, 47);
+  color: white;
+}
+.darkTheme .formTextarea{
+    background-color: rgb(29, 18, 47);
+    color: white;
+}
+.formTextarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+  outline: none;
+  font-size: 1rem;
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* Error message */
+.errorMessage {
+  color: red;
+  text-align: center;
+}
+
+/* Button group */
+.buttonGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.submitButton {
+
+  background: var(--primary-gradient);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.darkTheme .submitButton{
+  background: var(--dark-gradient);
+}
+.submitButton:hover{transform: translateY(-2px) scale(1.03);}
+
+.submitButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Loading spinner */
+.spinner {
+  animation: spin 1s linear infinite;
+  height: 20px;
+  width: 20px;
+  margin-right: 0.75rem;
+}
+
+.spinnerCircle {
+  opacity: 0.25;
+}
+
+.spinnerPath {
+  opacity: 0.75;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

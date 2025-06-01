@@ -1,0 +1,361 @@
+/* General Styles */
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main Body */
+.mainBody {
+  background-color: #f0f0f0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.wrapperInstruction {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  
+}
+
+.fileInfo {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.fileName {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.downloadButton {
+  margin-left: auto;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.downloadButton:hover {
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* Document Detail */
+.wrapperDocumentDetail {
+  width: 900px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0 20px 20px;
+  display: flex;
+  align-items: center;
+  background-color: var(--light-bg);
+  border-radius: 20px;
+  justify-content: center;
+}
+
+.pdfContainer {
+  width: 100%;
+
+
+  width: fit-content;
+  padding: 40px;
+  height: 500px;
+  overflow: auto;
+;
+}
+
+.pdfPage {
+  margin-bottom: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Comment Section */
+.wrapperComment {
+  padding-left: 50px;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.wrapperCommentDetail {
+  width: 80%;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  color: #555;
+}
+
+.inputWrapper {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.commentInput {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  padding: 5px;
+  color: #333;
+}
+
+.loginRequired {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+.commentsList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.commentItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.commentItem .avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ccc;
+  object-fit: cover;
+}
+
+.commentItem .commentContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.commentItem .commentContent .userName {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.commentItem .commentContent .userComment {
+  color: #555;
+}
+
+/* Turn Back Button */
+.wrapperTurnBack {
+  width: fit-content;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 2px solid #ff69b4;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff69b4;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.wrapperTurnBack:hover {
+  background-color: #ff69b4;
+  color: #fff;
+}
+
+.userNameRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.userName {
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--text-color, #333);
+}
+.submitButton{
+  background:var(--primary-gradient);
+  padding: 5px 20px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.submitButton:hover{
+  transform: translateY(-2px) scale(1.03);
+}
+.darkTheme .submitButton{
+  background: var(--dark-gradient);
+}
+.deleteButton {
+  background-color: transparent;
+  border: none;
+  color: #ff4d4f;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+}
+
+.deleteButton:hover {
+  background-color: rgba(255, 77, 79, 0.1);
+  color: #d9363e;
+}
+
+.commentTime {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 4px;
+}
+
+/* YourComponent.module.css or similar */
+.bookmarkButton {
+  /* Existing styles for the button */
+  padding: 8px 12px;
+  
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between icon and text */
+}
+
+.heartIcon {
+  font-size: 1.2rem; /* Adjust size as needed */
+  color: red;
+}
+
+.bookmarkButtonText {
+  color: red;
+}
+
+/* Responsive cho mobile */
+@media (max-width: 768px) {
+  .wrapperDocumentDetail {
+    padding: 0 10px;
+  }
+  
+  .pdfPage {
+    margin-bottom: 15px;
+  }
+  
+  .wrapperCommentDetail {
+    width: 90%;
+  }
+}
+
+/* Dark Mode */
+.darkTheme {
+  background-color: #1b1c31;
+  color: #f0f0f0;
+}
+
+.darkTheme .mainBody {
+  background-color: #1b1c31;
+}
+
+.darkTheme .wrapperInstruction {
+  background-color: #3d3f5d;
+  color: #f0f0f0;
+}
+
+.darkTheme .fileName {
+  color: #f0f0f0;
+}
+
+.darkTheme .downloadButton {
+  background-color: black;
+  color: #f0f0f0;
+  border: 1px solid #555;
+}
+
+.darkTheme .downloadButton:hover {
+  transform: translateY(-2px) scale(1.03);
+}
+
+.darkTheme .wrapperDocumentDetail {
+  background-color: #3d3f5d;
+  border: none;
+}
+
+.darkTheme .wrapperComment {
+  color: #f0f0f0;
+}
+
+.darkTheme .wrapperCommentDetail {
+  background-color: #3d3f5d;
+  border: 1px solid #555;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+  color: #f0f0f0;
+}
+
+.darkTheme .inputWrapper {
+  background-color: #2a2330;
+  border: none;
+}
+
+.darkTheme .commentInput {
+  color: #f0f0f0;
+}
+
+.darkTheme .loginRequired {
+  color: #aaa;
+}
+
+.darkTheme .commentsList .commentItem {
+  background-color: #2b2b2b;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.darkTheme .commentItem .commentContent .userName {
+  color: #f0f0f0;
+}
+
+.darkTheme .commentItem .commentContent .userComment {
+  color: #aaa;
+}
+
+.darkTheme .wrapperTurnBack {
+  background-color: #1b1c31;
+  border: 2px solid #ff69b4;
+  color: #ff69b4;
+}
+
+.darkTheme .wrapperTurnBack:hover {
+  background-color: #ff69b4;
+  color: #fff;
+}
+
+.darkTheme .userName {
+  color: #f0f0f0;
+}

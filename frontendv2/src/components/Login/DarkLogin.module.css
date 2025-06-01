@@ -1,0 +1,64 @@
+/* Dark Mode for Login Layout */
+.darkTheme .layout {
+  background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+}
+
+/* Dark Mode for Login Wrapper */
+.darkTheme .loginWrapper {
+  background-color: #1b1c31; /* Main wrapper background */
+  color: #f0f0f0; /* Text color */
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1); /* Softer shadow */
+}
+
+/* Dark Mode for Login Title */
+.darkTheme .loginTitle {
+  color: #f0f0f0; /* Title color */
+}
+
+/* Dark Mode for Error Message */
+.darkTheme .errorMessage {
+  color: #ff6b6b; /* Highlight error messages */
+}
+
+/* Dark Mode for Login Logo */
+.darkTheme .loginLogo {
+  background: linear-gradient(90deg, rgba(109, 213, 190, 1) 0%, rgba(255, 141, 213, 1) 100%);
+  -webkit-background-clip: text;
+  color: transparent; /* Keep the gradient effect */
+}
+
+/* Dark Mode for Login Form */
+.darkTheme .loginForm {
+  color: #f0f0f0; /* Ensure text is readable */
+}
+
+/* Dark Mode for Input Fields */
+.darkTheme .inputField {
+  background-color: #2b2b2b; /* Dark input background */
+  color: #f0f0f0; /* Input text color */
+  border: 1px solid #555; /* Darker border */
+}
+
+.darkTheme .inputField::placeholder {
+  color: #aaa; /* Placeholder text color */
+}
+
+/* Dark Mode for Login Options */
+.darkTheme .loginOptions {
+  color: #f0f0f0; /* Text color for options */
+}
+
+
+/* Dark Mode for Login Button */
+.darkTheme .loginBtn {
+  background: linear-gradient(90deg, rgba(109, 213, 190, 1) 0%, rgba(255, 141, 213, 1) 100%);
+  color: white;
+}
+
+.darkTheme .loginBtn:hover {
+  background: linear-gradient(90deg, #880383 0%, #21BFFE 100%); /* Change hover gradient */
+  opacity: 0.9; /* Slight opacity change */
+}
+/* Dark mode */
+.darkPasswordWrapper { /* nếu cần override */ }
+.darkShowPasswordBtn { /* nếu cần override */ }

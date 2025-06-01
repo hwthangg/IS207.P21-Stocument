@@ -1,0 +1,279 @@
+/* Footer.module.css */
+.footer {
+  width: 100%;
+  padding: 40px 20px;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 30px; /* Increased gap for better spacing */
+}
+
+.footerColumn {
+  padding: 0 10px;
+  min-width: 200px; /* Adjusted min-width for better responsiveness */
+  margin-bottom: 20px;
+}
+
+.footerAbout {
+  flex: 2;
+  min-width: 300px;
+}
+
+.footerLinksGroup {
+  flex: 1;
+}
+
+.footerSetting {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footerLogo {
+  display: flex; /* Use flex for logo and text alignment */
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px; /* More space below logo */
+}
+
+.footerLogo svg {
+  width: 50px; /* Slightly larger SVG */
+  height: 50px;
+}
+
+/* --- Contact Details Specific Styles --- */
+.contactDetailsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Spacing between each contact item (address, map, phone, email) */
+  margin-top: 10px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start; /* Align icon and text at the top */
+  gap: 10px; /* Space between icon and text */
+}
+
+.contactItem p {
+  margin: 0; /* Remove default paragraph margin */
+  font-size: 16px;
+  line-height: 1.5;
+  color: inherit; /* Inherit color from footer for theme consistency */
+}
+
+.contactItem a.contactLink {
+  text-decoration: none;
+  font-size: 16px;
+  color: inherit; /* Inherit color for theme consistency */
+  transition: color 0.2s ease;
+}
+
+.contactItem a.contactLink:hover {
+  color: #007bff; /* Highlight on hover */
+}
+
+.contactIcon {
+  color: inherit; /* Inherit color from footer for theme consistency */
+  flex-shrink: 0; /* Prevent icon from shrinking on small screens */
+  margin-top: 2px; /* Small adjustment for icon vertical alignment */
+}
+
+.phoneNumbers {
+  display: flex;
+  flex-direction: column;
+  gap: 2px; /* Small gap between multiple phone numbers */
+}
+
+/* --- End Contact Details Specific Styles --- */
+
+.footerColumn h4 {
+  font-size: 20px; /* Slightly larger heading */
+  font-weight: 700; /* Bolder heading */
+  margin-bottom: 20px; /* More space below headings */
+  color: inherit; /* Inherit color for theme consistency */
+}
+
+.footerQuickLinks {
+ display: flex;
+ flex-direction: column;
+  padding: 0;
+
+}
+
+.footerQuickLinks a {
+  margin-bottom: 12px; /* Increased spacing between list items */
+}
+
+.footerQuickLinks p {
+  font-size: 17px;
+  color: inherit; /* Inherit color for theme consistency */
+  transition: color 0.2s ease, font-size 0.2s ease, font-weight 0.2s ease; /* Added transition for hover */
+  text-decoration: none;
+  display: inline-block; /* Ensure p acts like a block for hover effect */
+  cursor: pointer; /* Indicate it's clickable */
+  height: 40px;
+}
+
+.footerQuickLinks p:hover {
+  color: #007bff; /* Highlight on hover */
+  font-weight: bold; /* Make bold on hover */
+  font-size: 18px; /* Slightly increase size on hover */
+}
+
+.footerContactLinks {
+  display: flex;
+  flex-direction: row;
+  gap: 25px; /* Increased gap for social icons */
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px; /* Space between social links and map */
+}
+
+.footerContactLinks a {
+  font-size: 28px; /* Larger social icons */
+  color: inherit; /* Inherit color for theme consistency */
+  transition: transform 0.2s ease, color 0.2s ease; /* Add transform for hover effect */
+}
+
+.footerContactLinks a:hover {
+  transform: translateY(-3px); /* Lift effect on hover */
+  color: #007bff; /* Highlight on hover */
+}
+
+.googleMapIframe {
+  width: 300px;
+  height: 200px; /* Fixed height for the map iframe */
+  border: none; /* Remove default iframe border */
+  border-radius: 8px; /* Slightly rounded corners for the map */
+  margin-top: 20px; /* Space above the map */
+}
+
+
+.settingToggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  border-radius: 15px;
+  background: linear-gradient(90deg, #6dd5be 0%, #ff8dd5 100%); /* Vibrant light mode gradient */
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.settingToggle.active {
+  background: linear-gradient(90deg, #880383 0%, #21bffe 100%); /* Vibrant dark mode gradient */
+}
+
+.toggleKnob {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  top: 2px;
+  left: 2px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.settingToggle.active .toggleKnob {
+  transform: translateX(30px);
+}
+
+.innerIcon {
+  font-size: 16px; /* Slightly larger icons inside knob */
+  transition: opacity 0.3s ease, color 0.3s ease; /* Smooth transition for icon visibility */
+}
+
+.sunIcon {
+  color: #f39c12; /* Sun color */
+  opacity: 1;
+}
+
+.moonIcon {
+  color: #34495e; /* Moon color */
+  opacity: 0; /* Hidden by default */
+}
+
+.settingToggle.active .sunIcon {
+  opacity: 0; /* Hide sun icon in dark mode */
+}
+
+.settingToggle.active .moonIcon {
+  opacity: 1; /* Show moon icon in dark mode */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .footerContainer {
+    flex-direction: column;
+    align-items: center; /* Center content on smaller screens */
+    gap: 20px;
+  }
+
+  .footerColumn {
+    width: 100%;
+    min-width: unset;
+    padding: 0;
+    margin-bottom: 15px;
+    text-align: center; /* Center text within columns on mobile */
+  }
+
+  .footerAbout {
+    flex: unset;
+  }
+
+  .footerLogo {
+    justify-content: center; /* Center logo on smaller screens */
+    margin-bottom: 15px;
+  }
+
+  .contactDetailsWrapper {
+    align-items: center; /* Center contact items */
+  }
+
+  .contactItem {
+    justify-content: center; /* Center icon and text within a contact item */
+    text-align: left; /* Keep text alignment for multi-line content if needed */
+  }
+
+  .contactItem p,
+  .contactItem a.contactLink {
+    font-size: 15px; /* Slightly smaller text for readability */
+  }
+
+  .footerColumn h4 {
+    font-size: 18px; /* Smaller headings on mobile */
+    text-align: center; /* Center headings */
+    width: 100%;
+  }
+
+  .footerQuickLinks,
+  .footerContactLinks {
+    justify-content: center; /* Center links and icons */
+    width: 100%;
+  }
+
+  .footerSetting {
+    align-items: center; /* Center theme toggle */
+    width: 100%;
+  }
+
+  .googleMapIframe {
+    height: 200px; /* Slightly smaller map on mobile */
+  }
+}

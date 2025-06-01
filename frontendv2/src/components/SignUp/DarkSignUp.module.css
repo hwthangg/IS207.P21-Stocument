@@ -1,0 +1,97 @@
+/* Dark Mode for Layout */
+.darkTheme .layout {
+  background-color: rgba(0, 0, 0, 0.8); /* Nền tối */
+}
+
+/* Dark Mode for SignUp Wrapper */
+.darkTheme .signupWrapper {
+  background-color: #1b1c31; /* Nền hộp tối */
+  color: #f0f0f0; /* Màu chữ sáng */
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1); /* Đổ bóng mềm hơn */
+}
+
+/* Dark Mode for SignUp Title */
+.darkTheme .signupTitle {
+  color: #f0f0f0; /* Màu chữ tiêu đề */
+}
+
+/* Dark Mode for Error Messages */
+.darkTheme .errorMessage {
+  color: #ff6b6b; /* Màu đỏ cho thông báo lỗi */
+}
+
+/* Dark Mode for SignUp Logo */
+.darkTheme .signupLogo {
+  background: linear-gradient(90deg, rgba(109, 213, 190, 1) 0%, rgba(255, 141, 213, 1) 100%);
+  -webkit-background-clip: text;
+  color: transparent; /* Giữ hiệu ứng gradient */
+}
+
+/* Dark Mode for SignUp Form */
+.darkTheme .signupForm {
+  color: #f0f0f0; /* Màu chữ sáng */
+}
+
+/* Dark Mode for Input Fields */
+.darkTheme .inputField {
+  background-color: #2b2b2b; /* Nền input tối */
+  color: #f0f0f0; /* Màu chữ input */
+  border: 1px solid #555; /* Viền tối hơn */
+}
+
+.darkTheme .inputField::placeholder {
+  color: #aaa; /* Placeholder màu xám nhạt */
+}
+
+/* Dark Mode for SignUp Options */
+.darkTheme .signupOptions {
+  color: #f0f0f0; /* Màu chữ cho các tùy chọn */
+}
+
+.darkTheme .haveAccount {
+  color: #66d9ef; /* Highlight link đã có tài khoản */
+}
+
+.darkTheme .haveAccount:hover {
+  text-decoration: underline;
+  color: #21BFFE; /* Màu hover sáng hơn */
+}
+
+/* Dark Mode for SignUp Button */
+.darkTheme .signupBtn {
+  background: linear-gradient(90deg, rgba(109, 213, 190, 1) 0%, rgba(255, 141, 213, 1) 100%);
+  color: white;
+}
+
+.darkTheme .signupBtn:hover {
+  background: linear-gradient(90deg, #880383 0%, #21BFFE 100%); /* Gradient hover khác */
+  opacity: 0.9; /* Giảm nhẹ opacity khi hover */
+}
+
+/* Responsive Design for Dark Mode */
+@media (max-width: 768px) {
+  .darkTheme .signupWrapper {
+    padding: 20px 30px;
+    max-width: 100%;
+  }
+
+  .darkTheme .signupTitle {
+    font-size: 24px;
+  }
+
+  .darkTheme .inputField {
+    font-size: 14px;
+  }
+
+  .darkTheme .signupBtn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .darkTheme .signupOptions {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+

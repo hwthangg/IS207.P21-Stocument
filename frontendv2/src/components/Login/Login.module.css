@@ -1,0 +1,226 @@
+/* Light Mode Styles (default) */
+.layout {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  z-index: 100;
+  background-color: rgba(194, 192, 192, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginWrapper {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.loginTitle {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 14px;
+  margin: 5px 0 0;
+}
+
+.loginLogo {
+  background: linear-gradient(90deg, rgb(109, 213, 190) 0%, rgb(255, 141, 213) 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: xx-large;
+}
+
+.loginForm {
+  max-width: 400px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.inputField {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #333;
+}
+
+.inputField::placeholder {
+  color: #999;
+}
+
+.loginOptions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.forgotPassword {
+  font-size: 14px;
+  text-decoration: none;
+  color: rgb(109, 213, 190);
+  cursor: pointer;
+}
+
+.forgotPassword:hover {
+  text-decoration: underline;
+}
+
+.noAccount {
+  font-size: 14px;
+  text-decoration: none;
+  color: rgb(255, 141, 213);
+  cursor: pointer;
+}
+
+.noAccount:hover {
+  text-decoration: underline;
+}
+
+.loginBtn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, rgb(109, 213, 190) 0%, rgb(255, 141, 213) 100%);
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.loginBtn:hover {
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* Dark Mode Styles */
+.darkLayout {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.darkLoginWrapper {
+  background-color: #1b1c31;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+.darkLoginTitle {
+  color: #f0f0f0;
+}
+
+.darkErrorMessage {
+  color: #ff6b6b;
+}
+
+.darkLoginLogo {
+  background: linear-gradient(90deg, #ff00f7 0%, #21BFFE 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.darkLoginForm {
+  color: #f0f0f0;
+}
+
+.darkInputField {
+  background-color: #2b2b2b;
+  color: #f0f0f0;
+  border: 1px solid #555;
+}
+
+.darkInputField::placeholder {
+  color: #aaa;
+}
+
+.darkLoginOptions {
+  color: #f0f0f0;
+}
+
+.darkForgotPassword {
+  color: #ff01f7;
+}
+
+.darkNoAccount {
+  color: #21BFFE;
+}
+
+.darkLoginBtn {
+   background: linear-gradient(90deg, #880383 0%, #21BFFE 100%);
+}
+
+.darkLoginBtn:hover {
+ transform: translateY(-2px) scale(1.03);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .loginWrapper,
+  .darkLoginWrapper {
+    padding: 20px 30px;
+    max-width: 100%;
+  }
+
+  .loginTitle,
+  .darkLoginTitle {
+    font-size: 24px;
+  }
+
+  .inputField,
+  .darkInputField {
+    font-size: 14px;
+  }
+
+  .loginBtn,
+  .darkLoginBtn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .loginOptions,
+  .darkLoginOptions {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+.passwordWrapper {
+  position: relative;
+}
+
+.togglePasswordBtn {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.googleLoginBtn{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  width: 100%;
+}
+
+

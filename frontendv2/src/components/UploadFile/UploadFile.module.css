@@ -1,0 +1,181 @@
+/* src/components/UploadFile/UploadFile.module.css */
+.uploadContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  border-radius: 15px;
+  background-color: var(--background-secondary); /* Use theme variable if available */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dropArea {
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: border-color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+.dragActive {
+  border-color: #6DD5BE;
+  background-color: #f7fafa;
+}
+
+.uploadIcon {
+  margin-bottom: 15px;
+}
+
+.dragText {
+  font-size: 1.1rem;
+  color: #777;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.browseButton {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.browseButton:hover {
+  opacity: 0.9;
+}
+
+.selectionControls {
+  display: flex;
+  gap: 20px;
+}
+
+.dropdown {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.label {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.selectField {
+  padding: 12px;
+  
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: var(--text-primary);
+  background-color: var(--input-background);
+}
+
+.selectField:focus {
+  outline: none;
+  border-color: #6DD5BE;
+  box-shadow: 0 0 0 0.2rem rgba(109, 213, 190, 0.25);
+}
+
+.uploadedFilesContainer {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background-color: var(--background-secondary-alt);
+}
+
+.fileListTitle {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.fileList {
+  list-style: none;
+  padding: 0;
+}
+
+.fileItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.fileItem:last-child {
+  border-bottom: none;
+}
+
+.fileIcon {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  color: #dc3545; /* PDF icon color */
+}
+
+.fileName {
+  flex-grow: 1;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  overflow-wrap: break-word;
+}
+
+.removeFileButton {
+  background: none;
+  border: none;
+  color: #dc3545;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-left: 15px;
+  transition: opacity 0.15s ease-in-out;
+}
+
+.removeFileButton:hover {
+  opacity: 0.7;
+}
+
+.uploadButton {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.uploadButton:hover:enabled {
+  opacity: 0.9;
+}
+
+.uploadButton:disabled {
+  background-color: #ccc !important;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.errorText {
+  color: #dc3545;
+  margin-top: 5px;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .selectionControls {
+    flex-direction: column;
+  }
+
+  .dropdown {
+    margin-bottom: 15px;
+  }
+}

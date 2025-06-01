@@ -1,0 +1,424 @@
+/* container desktop header */
+
+
+.darkTheme {
+  color: white;
+
+}
+
+.container {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  background-color: #fefaf5;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  z-index: 0;
+}
+
+.darkTheme .container {
+  background-color: #160531;
+}
+
+/* container logo  */
+.logoContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+
+  flex: 1;
+}
+
+.logoContainer p {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+/* container nav  */
+.navContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex: 2;
+
+}
+
+.navContainer p {
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.navContainer a:hover {
+  background: linear-gradient(90deg,
+      rgba(109, 213, 190, 1) 0%,
+      rgba(255, 141, 213, 1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.darkTheme .navContainer a:hover {
+  background: linear-gradient(90deg,
+      rgb(218, 4, 210) 0%,
+      rgba(33, 191, 254, 1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+.activeLink {
+  background: linear-gradient(90deg,
+      rgba(109, 213, 190, 1) 0%,
+      rgba(255, 141, 213, 1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(90deg,
+      rgba(109, 213, 190, 1) 0%,
+      rgba(255, 141, 213, 1) 100%) 1;
+}
+
+.darkTheme .activeLink {
+  background: linear-gradient(90deg,
+      rgb(218, 4, 210) 0%,
+      rgba(33, 191, 254, 1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(90deg,
+      rgba(136, 3, 131, 1) 0%,
+      rgba(33, 191, 254, 1) 100%) 1;
+}
+
+/* container auth  */
+.authContainer {
+  flex: 1;
+  justify-content: end;
+  display: flex;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: flex-end;
+}
+
+.buttonContainer button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, rgba(255, 141, 213, 1) 0%, rgba(109, 213, 190, 1) 100%);
+  color: white;
+  font-weight: bold;
+
+}
+
+.buttonContainer button:hover {
+  background: linear-gradient(90deg, rgba(255, 141, 213, 1) 100%, rgba(109, 213, 190, 1) 100%);
+}
+
+.darkTheme .buttonContainer button {
+  background: linear-gradient(90deg,
+      rgba(136, 3, 131, 1) 0%,
+      rgba(33, 191, 254, 1) 100%);
+}
+
+.darkTheme .buttonContainer button:hover {
+  background: linear-gradient(90deg,
+      rgba(136, 3, 131, 1) 100%,
+      rgba(33, 191, 254, 1) 100%);
+}
+
+.mobileContainer {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  background-color: rgb(0, 0, 0, 0.3);
+  left: 0;
+  top: 0;
+  height: 100vh;
+  border: 1px solid;
+  justify-content: space-between;
+  z-index: 10000;
+
+
+}
+
+.menuContainer {
+  border-top-right-radius: 30px;
+  width: 70%;
+  background-color: white;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.darkTheme .menuContainer {
+  background-color: rgb(35, 25, 53);
+}
+
+
+.title p {
+  font-size: x-large;
+  font-weight: bold;
+  text-align: center;
+}
+
+.title p span {
+  background: linear-gradient(90deg,
+      rgba(109, 213, 190, 1) 0%,
+      rgba(255, 141, 213, 1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: x-large;
+  font-weight: bold;
+
+}
+
+.darkTheme .title p span {
+  background: linear-gradient(90deg,
+      rgb(255, 0, 247) 0%,
+      rgba(33, 191, 254, 1) 100%);
+  -webkit-background-clip: text;
+
+}
+
+
+.content {
+  text-align: center;
+}
+
+.content span {
+  background: linear-gradient(90deg,
+      rgba(109, 213, 190, 1) 0%,
+      rgba(255, 141, 213, 1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+
+
+}
+
+.darkTheme .content span {
+  background: linear-gradient(90deg,
+      rgb(255, 0, 247) 0%,
+      rgb(0, 183, 255) 100%);
+  -webkit-background-clip: text;
+}
+
+.menuContainer .buttonContainer {
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid;
+  justify-content: space-around;
+}
+
+.menuContainer .navContainerMobile {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 20px;
+  width: 100%;
+  gap: 10px;
+
+
+}
+
+.menuContainer .navContainerMobile a {
+
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 15px;
+  border-radius: 20px;
+  font-weight: bold;
+
+}
+
+.menuContainer .navContainerMobile a:hover {
+  background: linear-gradient(90deg,
+      rgba(109, 213, 190, 1) 0%,
+      rgba(255, 141, 213, 1) 100%);
+  color: white;
+}
+
+.darkTheme .menuContainer .navContainerMobile a:hover {
+  background: linear-gradient(90deg,
+      rgb(255, 0, 247) 0%,
+      rgb(0, 183, 255) 100%);
+}
+
+.menuContainer .navContainerMobile .activeLinkMobile {
+  background: linear-gradient(90deg,
+      rgba(109, 213, 190, 1) 0%,
+      rgba(255, 141, 213, 1) 100%);
+  color: white;
+}
+
+.darkTheme .menuContainer .navContainerMobile .activeLinkMobile {
+  background: linear-gradient(90deg,
+      rgb(255, 0, 247) 0%,
+      rgb(0, 183, 255) 100%);
+}
+
+.iconMenu {
+  margin-right: 10px;
+
+}
+
+.closeButton {
+  position: absolute;
+  right: -15px;
+  top: 15%;
+  background: linear-gradient(90deg,
+      rgba(109, 213, 190, 1) 0%,
+      rgba(255, 141, 213, 1) 100%);
+  padding: 8px;
+  border-radius: 100px;
+}
+
+.darkTheme .closeButton {
+  background: linear-gradient(90deg,
+      rgb(255, 0, 247) 0%,
+      rgb(0, 183, 255) 100%);
+}
+
+.darkTheme .hamburgerMenu {
+  background: linear-gradient(90deg,
+      rgb(255, 0, 247) 0%,
+      rgb(0, 183, 255) 100%);
+}
+
+.hamburgerMenu {
+  position: fixed;
+  display: none;
+  right: 2vw;
+  background: linear-gradient(90deg,
+      rgba(109, 213, 190, 1) 0%,
+      rgba(255, 141, 213, 1) 100%);
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+  z-index: 100;
+}
+
+.userProfile {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: flex-end;
+  gap: 20px;
+  position: relative;
+}
+
+.darkTheme .dropDownProfile {
+  background-color: #3c2d53;
+}
+
+.welcomeText{
+  font-weight: bold;
+     background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.darkTheme .welcomeText{
+  background: var(--dark-gradient);
+    -webkit-background-clip: text;
+}
+
+.userName{
+  font-weight: bold;
+  text-align: right;
+}
+
+.dropDownProfile{
+position: absolute;
+top:105%;
+width: 150%;
+z-index: 30;
+background-color: var(--light-bg);
+border-bottom-right-radius: 10px;
+border-bottom-left-radius: 10px;
+box-shadow: 0 5px 10px rgba(0, 0 , 0, 0.5);
+box-sizing: border-box;
+}
+.dropDownProfileItem{
+  display: flex;
+  flex-direction: row;
+padding: 10px;
+gap: 10px;
+justify-content: flex-start;
+align-items: center;
+}
+.dropDownProfileItem:nth-child(2){
+ border-bottom-right-radius: 10px;
+border-bottom-left-radius: 10px;
+}
+.dropDownProfileItem:hover{
+  background: linear-gradient(90deg,
+      rgba(109, 213, 190, 1) 0%,
+      rgba(255, 141, 213, 1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+
+   
+    }
+
+   .darkTheme .dropDownProfileItem:hover{
+  background: var(--dark-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+
+   
+    }
+
+
+
+
+@media screen and (max-width: 768px) {
+  .navContainer {
+    display: none
+  }
+
+  .buttonContainer {
+    display: none;
+  }
+
+  .menuContainer .buttonContainer {
+    display: flex;
+  }
+
+  .userProfile{
+    display: none;
+  }
+
+  .menuContainer .userProfile{
+    display: flex;
+  }
+
+  .hamburgerMenu {
+    display: flex;
+  }
+}
