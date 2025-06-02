@@ -80,6 +80,25 @@ useEffect(()=>{
   useEffect(() => {
    
   }, [theme]);
+  const [general, setGeneral] = useState({});
+  useEffect(() => {
+      const fetchGeneral = async () => {
+        try {
+          const res = await fetch(
+            "http://localhost/stocument/backend/admin/ajax/information.php?get_general"
+          );
+          const data = await res.json();
+          setGeneral(data);
+        } catch (error) {
+          console.error("Error fetching general data:", error);
+        }
+      };
+  
+     
+      fetchGeneral();
+
+      setActiveLink("Giới thiệu");
+    }, [setActiveLink]);
 
   return (
     <div
@@ -97,11 +116,7 @@ useEffect(()=>{
           <div className={styles.introCard}>
             <h2 className={styles.introTitle}>Sharing is Caring</h2>
             <p className={styles.introText}>
-              Được thành lập vào năm 2025, Stocument là một nền tảng chuyên đi
-              ăn cắp dữ liệu người dùng. Việc sử dụng trang web này sẽ khiến bạn
-              bị bủh vô thời hạn. Với mỗi lượt truy cập vào trang, bạn sẽ tự
-              nguyện nộp cho trang 1 triệu đồng trong tài khoản mà không hề hay
-              biết.
+              {general.site_about}
             </p>
           </div>
         </div>
