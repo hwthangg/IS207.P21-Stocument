@@ -188,10 +188,11 @@ function UploadFile() {
 
       <div className={styles.selectionControls}>
         <div className={styles.dropdown}>
-          <label htmlFor="major" className={styles.label}>Ngành:</label>
+          <label htmlFor="major" className={styles.label} style={theme == 'dark' ? {color:'white'}:{}}>Ngành:</label>
           <select
             id="major"
             className={styles.selectField}
+            style={theme == 'dark' ? {color:'white'}:{}}
             value={selectedMajor}
             onChange={e => setSelectedMajor(e.target.value)}
           >
@@ -206,13 +207,14 @@ function UploadFile() {
         </div>
 
         <div className={styles.dropdown}>
-          <label htmlFor="subject" className={styles.label}>Môn học:</label>
+          <label htmlFor="subject" className={styles.label} style={theme == 'dark' ? {color:'white'}:{}}>Môn học:</label>
           <select
             id="subject"
             className={styles.selectField}
             value={selectedSubject}
             onChange={e => setSelectedSubject(e.target.value)}
             disabled={!selectedMajor}
+            style={theme == 'dark' ? {color:'white'}:{}}
           >
             <option value="">-- Chọn môn --</option>
             {subjects.map(subject => (

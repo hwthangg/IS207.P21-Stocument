@@ -69,6 +69,8 @@
   color: var(--text-primary);
 }
 
+.darkTheme .label{}
+
 .selectField {
   padding: 12px;
   
