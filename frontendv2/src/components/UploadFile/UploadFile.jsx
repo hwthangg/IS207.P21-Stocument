@@ -57,7 +57,7 @@ function UploadFile() {
         alert(`❌ Chỉ cho phép tệp PDF: ${file.name}`);
         return false;
       }
-      if (file.size > 10 * 1024 * 1024) { // 10MB limit
+      if (file.size > 100 * 1024 * 1024) { // 10MB limit
         alert(`❌ Tệp quá lớn (tối đa 10MB): ${file.name}`);
         return false;
       }
