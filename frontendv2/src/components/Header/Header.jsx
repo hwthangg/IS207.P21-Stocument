@@ -178,12 +178,16 @@ const Header = () => {
                     </p>
                   </div>
 
-                                        <img
-  src={user.picture ||avatar}
-  alt="avatar"
-  style={{ width: '60px', aspectRatio: '1 / 1', borderRadius: '100px' }}
-  referrerPolicy="no-referrer"
-/>
+                  <img
+                    src={user.picture || avatar}
+                    alt="avatar"
+                    style={{
+                      width: "60px",
+                      aspectRatio: "1 / 1",
+                      borderRadius: "100px",
+                    }}
+                    referrerPolicy="no-referrer"
+                  />
 
                   {showDropdown && (
                     <div className={styles.dropDownProfile}>
@@ -235,12 +239,16 @@ const Header = () => {
                         className={styles.userProfile}
                         style={{ width: "100%", justifyContent: "flex-start" }}
                       >
-                       <img
-  src={user.picture}
-  alt="avatar"
-  style={{ width: '60px', aspectRatio: '1 / 1', borderRadius: '100px' }}
-  referrerPolicy="no-referrer"
-/>
+                        <img
+                          src={user.picture}
+                          alt="avatar"
+                          style={{
+                            width: "60px",
+                            aspectRatio: "1 / 1",
+                            borderRadius: "100px",
+                          }}
+                          referrerPolicy="no-referrer"
+                        />
                         <div>
                           <p className={styles.welcomeText}>Xin chào!</p>
                           <p className={styles.userName}>
@@ -263,17 +271,8 @@ const Header = () => {
                         <button onClick={toggleSignUp}>Đăng ký</button>{" "}
                         <button onClick={toggleLogin}>Đăng nhập</button>
                       </div>{" "}
-                      <div className={styles.content}>
-                        <p>
-                          <span>Đăng nhập</span> ngay để có thể tìm được <br />
-                          tài liệu mong muốn!
-                        </p>
-                      </div>
-                      <div className={styles.buttonContainer}>
-                        {" "}
-                        <button onClick={toggleSignUp}>Đăng ký</button>{" "}
-                        <button onClick={toggleLogin}>Đăng nhập</button>
-                      </div>
+                      
+                     
                     </>
                   )}
 
